@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public GameObject shootingObject;
     public float fireRate;
     private float nextFire;
+    public ParticleSystem BoomParticle;
 
     void Start()
     {
@@ -55,7 +56,17 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("ShootingEnem"))
         {
+            Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
             Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
             Destroy(gameObject);
         }
     }
