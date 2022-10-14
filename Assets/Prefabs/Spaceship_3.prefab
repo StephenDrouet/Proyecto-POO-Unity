@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 8196579657476392717}
   - component: {fileID: 6207348473684177863}
   - component: {fileID: 3190588484835874353}
-  - component: {fileID: -2154044767437930836}
   m_Layer: 0
   m_Name: Spaceship_3
-  m_TagString: Player
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,10 +26,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5558588716671144466}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.56, y: 0, z: -1.4999999}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.79999995, y: 0.79999995, z: 0.79999995}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -63,10 +62,10 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ab84d5948428efc42bfa0e707f759da8, type: 2}
-  - {fileID: 2100000, guid: db0e3dcb7afe9564582e94847cc39e3a, type: 2}
-  - {fileID: 2100000, guid: 7ee22b76d10e19b4d823e8d4703f260a, type: 2}
-  - {fileID: 2100000, guid: 2ffa6d5fb98889c459c73543aee6899b, type: 2}
+  - {fileID: 2100000, guid: 69f38d4b16f5f0347b6850ed478bbda1, type: 2}
+  - {fileID: 2100000, guid: e4189dc361c7eb3458600e4bda90a40b, type: 2}
+  - {fileID: 2100000, guid: 32faaffef51360841a0260a5718aefc5, type: 2}
+  - {fileID: 2100000, guid: c0f44c94241d99e4b943e8d3d5a23b7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -101,19 +100,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4999999, y: 0.9, z: 2.4999998}
   m_Center: {x: 0, y: 0.45, z: 0}
---- !u!54 &-2154044767437930836
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5558588716671144466}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

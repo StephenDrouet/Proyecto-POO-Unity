@@ -2733,13 +2733,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: BoomParticle
+      value: 
+      objectReference: {fileID: 845648806457268710, guid: 4be3dd6a4c467d448a0dcb4470fcc9e0, type: 3}
     - target: {fileID: 2479829732948975043, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2479829732948975043, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2479829732948975043, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2747,7 +2751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2479829732948975043, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -11.4
+      value: -11.34
       objectReference: {fileID: 0}
     - target: {fileID: 2479829732948975043, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: m_LocalRotation.w

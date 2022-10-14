@@ -13,6 +13,9 @@ public class EnemySpaceShip : Enemy
     private int maxSpeedH = 7;
     private int speedH;
 
+    private int indexObject;
+    private GameObject visualObject;
+
     void Shoot()
     {
         Instantiate(shootingEnemy, transform.position, shootingEnemy.transform.rotation);
@@ -44,6 +47,10 @@ public class EnemySpaceShip : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        indexObject = Random.Range(0, transform.childCount);
+        visualObject = transform.GetChild(indexObject).gameObject;
+        visualObject.SetActive(true);
+
         enemyRb = GetComponent<Rigidbody>();
         speedH = Random.Range(0, maxSpeedH);
         xBound = Random.Range(0, maxXBound);
