@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveBackGround : MonoBehaviour
 {
     private float speed = 15;
-    private float resetPos = -45.5f;
+    private float resetPos = -50;
 
     // Update is called once per frame
     void LateUpdate()
