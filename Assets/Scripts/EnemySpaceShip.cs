@@ -5,20 +5,25 @@ using UnityEngine;
 public class EnemySpaceShip : Enemy
 {
     public GameObject shootingEnemy;
-    public float fireRate = 0.7f;
+    private GameObject visualObject;
+    private Rigidbody enemyRb;
+
     private bool isFirst = true;
+
+    public float fireRate = 0.7f;
     private float xBound;
     private float maxXBound = 15;
-    private Rigidbody enemyRb;
     private int maxSpeedH = 7;
     private int speedH;
-
     private int indexObject;
-    private GameObject visualObject;
+    
 
     void Shoot()
     {
-        Instantiate(shootingEnemy, transform.position, shootingEnemy.transform.rotation);
+        if (gameUI.isLife)
+        {
+            Instantiate(shootingEnemy, transform.position, shootingEnemy.transform.rotation);
+        }
     }
 
     public override void Move()
@@ -47,6 +52,8 @@ public class EnemySpaceShip : Enemy
     // Start is called before the first frame update
     void Start()
     {
+        loadGameUI();
+
         indexObject = Random.Range(0, transform.childCount);
         visualObject = transform.GetChild(indexObject).gameObject;
         visualObject.SetActive(true);
@@ -64,6 +71,13 @@ public class EnemySpaceShip : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        Move();
+        if (gameUI.isLife)
+        {
+            Move();
+        }
+        else
+        {
+            enemyRb.velocity = Vector3.zero;
+        }
     }
 }

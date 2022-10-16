@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class ShootingMove : MonoBehaviour
 {
-
+    private GameUI gameUI;
     public float speed = 4;
+
+    private void Start()
+    {
+        gameUI = GameObject.Find("Canvas").GetComponent<GameUI>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        if (gameUI.isLife)
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
     }
-
-
 }

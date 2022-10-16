@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyObstacle : Enemy
 {
-    private float speedRotation = 2;
+    private GameObject visualObject;
+
+    private float speedRotation = 5;
     private Vector3 Rotation;
     private int indexObject;
-    private GameObject visualObject;
 
     private void Start()
     {
+        loadGameUI();
+
         indexObject = Random.Range(0, transform.childCount - 1);
         visualObject = transform.GetChild(indexObject).gameObject;
         visualObject.SetActive(true);
@@ -23,8 +26,11 @@ public class EnemyObstacle : Enemy
     // Update is called once per frame
     void Update()
     {
-        RotateObject();
-        Move();
+        if (gameUI.isLife)
+        {
+            RotateObject();
+            Move();
+        }
     }
 
     void RotateObject()

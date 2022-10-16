@@ -4,9 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - Shooting
   - ShootingEnem
+  - EnemyObs
+  - EnemyShip
+  - Enemy
+  - PowerUp
   layers:
   - Default
   - TransparentFX

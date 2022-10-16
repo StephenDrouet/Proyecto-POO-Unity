@@ -5,8 +5,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    protected GameUI gameUI;
     public float speed;
     public ParticleSystem BoomParticle;
+
+    public void loadGameUI()
+    {
+        gameUI = GameObject.Find("Canvas").GetComponent<GameUI>();
+    }
 
     public virtual void Move()
     {
@@ -17,9 +23,21 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shooting"))
         {
-            Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
-            Destroy(gameObject);
-            Destroy(other.gameObject);
+            if (gameObject.CompareTag("EnemyShip"))
+            {
+                gameUI.UpdateScore(15);
+                Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+            }
+
+            if (gameObject.CompareTag("EnemyObs"))
+            {
+                gameUI.UpdateScore(5);
+                Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
+                Destroy(gameObject);
+                Destroy(other.gameObject);
+            }
         }
     }
 

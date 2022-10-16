@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class MoveBackGround : MonoBehaviour
 {
+    public GameUI gameUI;
+    
     private float speed = 15;
     private float resetPos = -50;
 
     // Update is called once per frame
     void LateUpdate()
     {
-        TranslateBackground();
+        if (gameUI.isLife)
+        {
+            TranslateBackground();
+        }
     }
 
     void TranslateBackground()
