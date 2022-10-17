@@ -8,9 +8,12 @@ public class Enemy : MonoBehaviour
     protected GameUI gameUI;
     public float speed;
     public ParticleSystem BoomParticle;
+    public AudioClip BoomSound;
+    public AudioSource audioSource;
 
     public void loadGameUI()
     {
+        audioSource = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         gameUI = GameObject.Find("Canvas").GetComponent<GameUI>();
     }
 
@@ -23,6 +26,7 @@ public class Enemy : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Shooting"))
         {
+            audioSource.PlayOneShot(BoomSound, 0.7f);
             if (gameObject.CompareTag("EnemyShip"))
             {
                 gameUI.UpdateScore(15);
@@ -45,6 +49,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            audioSource.PlayOneShot(BoomSound, 0.7f);
             Instantiate(BoomParticle, transform.position, BoomParticle.transform.rotation);
             Destroy(gameObject);
         }

@@ -7,6 +7,7 @@ public class EnemySpaceShip : Enemy
     public GameObject shootingEnemy;
     private GameObject visualObject;
     private Rigidbody enemyRb;
+    public AudioClip shootAudio;
 
     private bool isFirst = true;
 
@@ -22,6 +23,7 @@ public class EnemySpaceShip : Enemy
     {
         if (gameUI.isLife)
         {
+            audioSource.PlayOneShot(shootAudio, 0.5f);
             Instantiate(shootingEnemy, transform.position, shootingEnemy.transform.rotation);
         }
     }
@@ -51,7 +53,7 @@ public class EnemySpaceShip : Enemy
 
     // Start is called before the first frame update
     void Start()
-    {
+    {        
         loadGameUI();
 
         indexObject = Random.Range(0, transform.childCount);

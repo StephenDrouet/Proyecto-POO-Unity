@@ -2221,6 +2221,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2354,6 +2355,102 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!82 &963194230
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 48f2fe75ce24d174886f924230b8a4e9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &990687575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4530,9 +4627,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 187982963}
     - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: shootAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: 75fb5f1967d49cc46a531f40c4515ed9, type: 3}
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: BoomParticle
       value: 
       objectReference: {fileID: 845648806457268710, guid: 4be3dd6a4c467d448a0dcb4470fcc9e0, type: 3}
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: powerUpAudio
+      value: 
+      objectReference: {fileID: 8300000, guid: e3c7193ade0f2a048a13aef04a33f078, type: 3}
     - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: BoomParticle2
       value: 
@@ -4541,6 +4646,18 @@ PrefabInstance:
       propertyPath: PowerUpParticle
       value: 
       objectReference: {fileID: 1652858966533951992, guid: 9fc690220b912d3448c5c9737578fab2, type: 3}
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: boomAudio.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: boomAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 13bedeb20258847458254384aca96b80, type: 3}
+    - target: {fileID: 2113274948, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
+      propertyPath: boomAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d3a6555b59c306341ba266382894cf9c, type: 3}
     - target: {fileID: 80508678813782158, guid: 50fa3aea8f50b97498715f844a667fed, type: 3}
       propertyPath: UVModule.mode
       value: 0
